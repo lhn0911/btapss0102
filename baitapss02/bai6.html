@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Cách 1:
+        function sum(str) {
+            let sum = 0;
+            for (let i = 0; i < str.length; i++) {
+                sum += str[i];
+            }
+            return sum;
+        }
+        console.log(sum([1, 2, 3, 4, 5, 6]));
+
+
+        // Cách 2:
+        function sum(str) {
+            return str.reduce((acc, value, arr) => acc + value, 0);
+        }
+        console.log(sum([1, 2, 3, 4, 5, 6]));
+
+    </script>
+</body>
+</html>
